@@ -10,7 +10,10 @@ RUN cargo new hello
 
 WORKDIR /usr/src/hello
 
-RUN cargo add axum
+RUN cargo add tokio
 
 RUN cargo build --target x86_64-unknown-linux-musl --release
+
+RUN ldd ./target/x86_64-unknown-linux-musl/release/hello
+
 RUN ./target/x86_64-unknown-linux-musl/release/hello
