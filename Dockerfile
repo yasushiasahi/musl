@@ -10,7 +10,7 @@ RUN cargo new hello
 
 WORKDIR /usr/src/hello
 
-RUN cargo add tokio
+RUN cargo add reqwest -F json
 
 RUN cargo build --target x86_64-unknown-linux-musl --release
 
