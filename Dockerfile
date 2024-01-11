@@ -1,8 +1,9 @@
 FROM rust:1.75
 
 RUN apt update
-RUN apt install -y musl-tools
-RUN apt install -y musl-dev
+RUN apt install -y linux-musl-dev
+# RUN apt install -y musl-tools
+# RUN apt install -y musl-dev
 
 RUN rustup target add x86_64-unknown-linux-musl
 
