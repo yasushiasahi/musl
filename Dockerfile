@@ -7,5 +7,10 @@ RUN rustup target add x86_64-unknown-linux-musl
 WORKDIR /usr/src/
 
 RUN cargo new hello
-RUN cd hello && cargo build --target x86_64-unknown-linux-musl --release
+
+WORKDIR /usr/src/
+
+RUN cargo add axum
+
+RUN cargo build --target x86_64-unknown-linux-musl --release
 RUN ./target/x86_64-unknown-linux-musl/release/hello
