@@ -8,7 +8,7 @@ WORKDIR /usr/src/
 
 RUN cargo new hello
 
-WORKDIR /usr/src/
+WORKDIR /usr/src/hello
 
 RUN cargo add axum
 
